@@ -1,0 +1,153 @@
+% Elegancki szablon dla esejów filozoficzno-religijnych z pełnym wsparciem polskich znaków
+\documentclass[12pt,a4paper]{article}
+
+% Używamy XeLaTeX lub LuaLaTeX dla lepszego wsparcia Unicode
+\usepackage{ifxetex,ifluatex}
+\ifxetex
+  \usepackage{fontspec}
+  \usepackage{xunicode}
+\else\ifluatex
+  \usepackage{fontspec}
+\else
+  % Dla pdfLaTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern} % Latin Modern - pełne wsparcie polskich znaków
+\fi\fi
+
+% Język polski
+\usepackage[polish]{babel}
+\usepackage{polski}
+
+% Czcionki z pełnym wsparciem polskich znaków
+\ifxetex
+  \setmainfont{TeX Gyre Termes} % Times-podobna czcionka z polskimi znakami
+  \setsansfont{TeX Gyre Heros}
+  \setmonofont{TeX Gyre Cursor}
+\else\ifluatex
+  \setmainfont{TeX Gyre Termes}
+  \setsansfont{TeX Gyre Heros}
+  \setmonofont{TeX Gyre Cursor}
+\fi\fi
+
+% Mikrotypografia
+\usepackage{microtype}
+
+% Układ strony
+\usepackage[
+  top=3cm,
+  bottom=3cm,
+  left=3cm,
+  right=3cm,
+  headheight=15pt
+]{geometry}
+
+% Interlinia
+\usepackage{setspace}
+\onehalfspacing
+
+% Nagłówki i stopki
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Formatowanie sekcji
+\usepackage{titlesec}
+
+% Sekcje główne - numeracja rzymska, wyśrodkowane
+\renewcommand{\thesection}{\Roman{section}}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\centering}
+  {\thesection.}
+  {1em}
+  {}
+
+% Podsekcje
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\thesubsection.}
+  {1em}
+  {}
+
+% Kolory
+\usepackage[dvipsnames]{xcolor}
+\definecolor{biblequote}{RGB}{102,51,102}
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Cytaty
+\usepackage{csquotes}
+
+% Środowisko dla cytatów biblijnych
+\newenvironment{biblequote}
+  {\begin{quote}\itshape\color{biblequote}}
+  {\end{quote}}
+
+% Komenda dla krótkich cytatów biblijnych
+\newcommand{\bq}[1]{\textit{\color{biblequote}#1}}
+
+% Separator między sekcjami
+\newcommand{\sectionbreak}{%
+  \begin{center}
+    \vspace{1em}
+    \rule{0.3\textwidth}{0.4pt}
+    \vspace{1em}
+  \end{center}
+}
+
+% Pierwszy akapit po sekcji bez wcięcia
+\usepackage{indentfirst}
+\setlength{\parindent}{1.5em}
+
+% Hiperłącza (bez kolorowania w PDF)
+\usepackage[
+  colorlinks=false,
+  pdfborder={0 0 0},
+  unicode=true
+]{hyperref}
+
+% Metadane dokumentu
+$if(title)$
+\title{%
+  \vspace{-2cm}
+  {\LARGE\bfseries $title$}
+  $if(subtitle)$\\[0.7cm]
+  {\large\itshape $subtitle$}
+  $endif$
+  \vspace{0.5cm}
+}
+$endif$
+
+$if(author)$
+\author{\large $author$}
+$endif$
+
+$if(date)$
+\date{$date$}
+$else$
+\date{\today}
+$endif$
+
+% Początek dokumentu
+\begin{document}
+
+% Strona tytułowa
+$if(title)$
+\maketitle
+\thispagestyle{empty}
+\newpage
+$endif$
+
+% Spis treści (opcjonalny)
+$if(toc)$
+\tableofcontents
+\newpage
+$endif$
+
+% Treść dokumentu
+$body$
+
+\end{document}

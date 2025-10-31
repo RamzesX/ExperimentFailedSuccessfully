@@ -1,0 +1,102 @@
+% Prostszy, elegancki szablon dla esejów filozoficzno-religijnych
+\documentclass[12pt,a4paper]{article}
+
+% Kodowanie i język
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+
+% Czcionka - używamy standardowej eleganckiej
+\usepackage{palatino}  % Elegancka, klasyczna czcionka
+\usepackage{microtype}  % Mikrotypografia
+
+% Układ strony
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.4}  % Zwiększona interlinia
+
+% Nagłówki i stopki
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\itshape\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{15pt}
+
+% Formatowanie tytułów sekcji
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\centering}
+  {}
+  {0em}
+  {}[\vspace{0.5em}]
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {}
+  {0em}
+  {}
+
+% Kolory
+\usepackage[dvipsnames]{xcolor}
+\definecolor{biblequote}{RGB}{102,51,102}
+
+% Cytaty
+\usepackage{csquotes}
+\usepackage[leftmargin=2em,rightmargin=2em,vskip=0.5\baselineskip]{quoting}
+
+% Polecenie dla cytatów biblijnych
+\newcommand{\bq}[1]{\textit{\color{biblequote}#1}}
+
+% Środowisko dla dłuższych cytatów
+\newenvironment{biblequote}
+{\begin{quoting}\itshape\color{biblequote}}
+{\end{quoting}}
+
+% Separator sekcji
+\newcommand{\sectionbreak}{%
+  \begin{center}
+    \vspace{1em}
+    \rule{0.5\textwidth}{0.4pt}
+    \vspace{1em}
+  \end{center}
+}
+
+% Hiperłącza
+\usepackage[hidelinks]{hyperref}
+
+% Metadane
+$if(title)$
+\title{%
+  {\LARGE\bfseries $title$}
+  $if(subtitle)$\\[0.5cm]
+  {\large\itshape $subtitle$}
+  $endif$
+}
+$endif$
+
+$if(author)$
+\author{\large $author$}
+$endif$
+
+$if(date)$
+\date{$date$}
+$else$
+\date{\today}
+$endif$
+
+\begin{document}
+
+% Strona tytułowa
+$if(title)$
+\maketitle
+\thispagestyle{empty}
+\vspace{2cm}
+\newpage
+$endif$
+
+% Treść
+$body$
+
+\end{document}

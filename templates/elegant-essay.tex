@@ -1,0 +1,124 @@
+% Elegancki szablon dla esejów filozoficzno-religijnych
+\documentclass[12pt,a4paper]{article}
+
+% Kodowanie i język
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+
+% Elegancka typografia
+\usepackage{libertine}  % Klasyczna, elegancka czcionka
+\usepackage[scaled=0.9]{libertineMono}
+\usepackage{microtype}  % Mikrotypografia dla lepszego składu
+
+% Układ strony
+\usepackage[top=3cm, bottom=3cm, left=3.5cm, right=3.5cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.3}  % Lekko zwiększona interlinia dla lepszej czytelności
+
+% Nagłówki i stopki
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE,LO]{\leftmark}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Ozdobne inicjały
+\usepackage{lettrine}
+\usepackage{GoudyIn}  % Ozdobna czcionka dla inicjałów
+
+% Formatowanie tytułów sekcji
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\centering}
+  {\Roman{section}.}
+  {1em}
+  {}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\arabic{subsection}.}
+  {1em}
+  {}
+
+% Kolorowanie i linki
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{RGB}{26,13,171}
+\definecolor{biblequote}{RGB}{102,0,51}
+
+% Hiperłącza
+\usepackage[colorlinks=true,linkcolor=darkblue,urlcolor=darkblue]{hyperref}
+
+% Cytaty i wersety
+\usepackage{verse}
+\usepackage{quoting}
+\quotingsetup{vskip=0.5\baselineskip, leftmargin=2em, rightmargin=2em}
+
+% Środowisko dla cytatów biblijnych
+\newenvironment{biblequote}
+{\begin{quoting}\itshape\color{biblequote}}
+{\end{quoting}}
+
+% Polecenie dla krótkich cytatów biblijnych
+\newcommand{\bq}[1]{\textit{\color{biblequote}#1}}
+
+% Ozdobniki
+\usepackage{pgfornament}
+\newcommand{\sectionbreak}{%
+  \begin{center}
+    \vspace{1em}
+    \pgfornament[width=3cm]{88}
+    \vspace{1em}
+  \end{center}
+}
+
+% Bibliografia
+\usepackage[style=verbose-ibid,backend=biber]{biblatex}
+
+% Metadane dokumentu
+$if(title)$
+\title{%
+  \vspace{-2cm}
+  {\huge\bfseries $title$}\\
+  $if(subtitle)$
+  \vspace{0.5cm}
+  {\Large $subtitle$}
+  $endif$
+}
+$endif$
+
+$if(author)$
+\author{\large $author$}
+$endif$
+
+$if(date)$
+\date{$date$}
+$else$
+\date{\today}
+$endif$
+
+% Początek dokumentu
+\begin{document}
+
+% Strona tytułowa
+$if(title)$
+\maketitle
+\thispagestyle{empty}
+\newpage
+$endif$
+
+% Spis treści (opcjonalny)
+$if(toc)$
+\tableofcontents
+\newpage
+$endif$
+
+% Treść dokumentu
+$body$
+
+% Bibliografia (jeśli jest)
+$if(bibliography)$
+\printbibliography
+$endif$
+
+\end{document}

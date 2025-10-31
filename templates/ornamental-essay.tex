@@ -1,0 +1,229 @@
+% Ozdobny szablon dla esejów filozoficzno-religijnych
+% Wymaga XeLaTeX lub LuaLaTeX
+\documentclass[12pt,a4paper]{book}
+
+% Podstawowe pakiety
+\usepackage{fontspec}
+\usepackage[polish]{babel}
+\usepackage{polski}
+
+% Eleganckie czcionki
+\setmainfont[
+    BoldFont={EB Garamond Bold},
+    ItalicFont={EB Garamond Italic},
+    BoldItalicFont={EB Garamond Bold Italic}
+]{EB Garamond}
+
+% Alternatywne czcionki (jeśli EB Garamond niedostępny)
+\IfFontExistsTF{EB Garamond}{}{
+    \setmainfont{TeX Gyre Pagella}
+}
+
+% Układ strony - szersze marginesy na książkowy styl
+\usepackage[
+    top=3.5cm,
+    bottom=3.5cm,
+    left=4cm,
+    right=3cm,
+    headheight=15pt,
+    marginparwidth=2cm
+]{geometry}
+
+% Interlinia
+\usepackage{setspace}
+\setstretch{1.4}
+
+% Ozdobne nagłówki i stopki
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+% Nagłówki - małe kapitaliki
+\fancyhead[LE]{\small\scshape\leftmark}
+\fancyhead[RO]{\small\scshape\rightmark}
+\fancyfoot[C]{\thepage}
+
+% Ozdobna linia w nagłówku
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Kolory
+\usepackage[dvipsnames]{xcolor}
+\definecolor{chaptercolor}{RGB}{128,0,0}
+\definecolor{biblequote}{RGB}{102,51,102}
+\definecolor{ornamentcolor}{RGB}{150,111,51}
+
+% Ozdobne formatowanie rozdziałów
+\usepackage{titlesec}
+\usepackage{tikz}
+\usetikzlibrary{decorations.text}
+
+% Rozdział z ozdobnikami
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering\color{chaptercolor}}
+  {%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=center] at (current page.center) {
+        \huge\Roman{chapter}
+      };
+    \end{tikzpicture}
+  }
+  {2em}
+  {%
+    \rule{\textwidth}{1pt}\\[0.5em]
+    #1\\[-0.5em]
+    \rule{\textwidth}{1pt}
+  }
+
+% Sekcje z numeracją rzymską
+\renewcommand{\thesection}{\Roman{section}}
+\titleformat{\section}
+  {\normalfont\Large\bfseries\centering\color{chaptercolor}}
+  {\thesection.}
+  {1em}
+  {}
+
+% Ozdobne inicjały
+\usepackage{lettrine}
+\renewcommand{\LettrineFontHook}{\color{chaptercolor}}
+\setlength{\DefaultNindent}{0.5em}
+
+% Cytaty
+\usepackage{csquotes}
+
+% Środowisko dla cytatów biblijnych z ozdobnikami
+\newenvironment{biblequote}
+{%
+  \begin{center}
+  \begin{minipage}{0.8\textwidth}
+  \vspace{0.5em}
+  \color{ornamentcolor}\rule{0.5\textwidth}{0.4pt}
+  \vspace{0.3em}
+  \begin{quote}
+  \itshape\color{biblequote}
+}
+{%
+  \end{quote}
+  \vspace{0.3em}
+  \color{ornamentcolor}\rule{0.5\textwidth}{0.4pt}
+  \vspace{0.5em}
+  \end{minipage}
+  \end{center}
+}
+
+% Komenda dla krótkich cytatów
+\newcommand{\bq}[1]{\textit{\color{biblequote}#1}}
+
+% Ozdobniki między sekcjami
+\usepackage{pgfornament}
+\newcommand{\sectionbreak}{%
+  \begin{center}
+    \vspace{1.5em}
+    \color{ornamentcolor}
+    \pgfornament[width=4cm]{88}
+    \vspace{1.5em}
+  \end{center}
+}
+
+% Środowisko dla ważnych myśli
+\newenvironment{reflection}
+{%
+  \begin{center}
+  \begin{minipage}{0.85\textwidth}
+  \vspace{1em}
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[ornamentcolor,thick]
+      (0,0) -- (0.5,0)
+      (0,0) -- (0,-0.5);
+    \draw[ornamentcolor,thick]
+      (\textwidth,0) -- (\textwidth-0.5,0)
+      (\textwidth,0) -- (\textwidth,-0.5);
+  \end{tikzpicture}
+  \itshape
+}
+{%
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[ornamentcolor,thick]
+      (0,0) -- (0.5,0)
+      (0,0) -- (0,0.5);
+    \draw[ornamentcolor,thick]
+      (\textwidth,0) -- (\textwidth-0.5,0)
+      (\textwidth,0) -- (\textwidth,0.5);
+  \end{tikzpicture}
+  \vspace{1em}
+  \end{minipage}
+  \end{center}
+}
+
+% Marginalia (uwagi na marginesie)
+\usepackage{marginnote}
+\renewcommand*{\marginfont}{\footnotesize\itshape\color{gray}}
+
+% Hiperłącza bez ramek
+\usepackage[
+  colorlinks=false,
+  pdfborder={0 0 0},
+  unicode=true
+]{hyperref}
+
+% Strona tytułowa
+\renewcommand{\maketitle}{%
+  \begin{titlepage}
+    \centering
+    \vspace*{2cm}
+
+    % Ozdobnik górny
+    {\color{ornamentcolor}\pgfornament[width=6cm]{75}}
+
+    \vspace{2cm}
+
+    % Tytuł
+    {\Huge\bfseries\color{chaptercolor} $title$\par}
+
+    $if(subtitle)$
+    \vspace{1cm}
+    {\Large\itshape $subtitle$\par}
+    $endif$
+
+    \vspace{2cm}
+
+    % Ozdobnik środkowy
+    {\color{ornamentcolor}\pgfornament[width=4cm]{88}}
+
+    \vspace{2cm}
+
+    % Autor
+    $if(author)$
+    {\Large\scshape $author$\par}
+    $endif$
+
+    \vfill
+
+    % Data
+    $if(date)$
+    {\large $date$\par}
+    $else$
+    {\large\today\par}
+    $endif$
+
+    \vspace{1cm}
+
+    % Ozdobnik dolny
+    {\color{ornamentcolor}\pgfornament[width=6cm]{75}}
+
+    \vspace{2cm}
+  \end{titlepage}
+}
+
+% Początek dokumentu
+\begin{document}
+
+% Strona tytułowa
+$if(title)$
+\maketitle
+$endif$
+
+% Treść
+$body$
+
+\end{document}

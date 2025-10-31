@@ -1,0 +1,23 @@
+---
+title: "Kielich Getsemani"
+subtitle: "O goryczy jako drodze do świadomości"
+author: "Norbert Marchewka"
+date: \today
+lang: pl-PL
+
+# Opcje pandoc
+pdf-engine: xelatex
+template: templates/polish-elegant.tex
+toc: false
+number-sections: false
+
+# Formatowanie
+fontsize: 12pt
+documentclass: article
+classoption:
+  - 12pt
+  - a4paper
+
+# Podświetlanie składni (jeśli potrzebne)
+highlight-style: tango
+---

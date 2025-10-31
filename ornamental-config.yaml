@@ -1,0 +1,42 @@
+---
+# Przykładowa konfiguracja dla ozdobnego szablonu
+# Używać na szczególne okazje lub prezentacje
+
+title: "Tytuł Twojego Eseju"
+subtitle: "Podtytuł filozoficzno-teologiczny"
+author: "Norbert Marchewka"
+date: \today
+lang: pl-PL
+
+# Opcje pandoc
+pdf-engine: xelatex  # Wymagane dla czcionek
+template: templates/ornamental-essay.tex
+toc: false
+number-sections: false
+
+# Formatowanie
+fontsize: 12pt
+documentclass: book
+classoption:
+  - 12pt
+  - a4paper
+  - twoside  # Dla druku dwustronnego
+
+# Dodatkowe pakiety (jeśli potrzebne)
+header-includes:
+  - \usepackage{epigraph}  # Dla cytatów na początku rozdziałów
+  - \renewcommand{\epigraphwidth}{0.7\textwidth}
+
+# Uwagi:
+# Ten szablon wymaga zainstalowanych czcionek:
+# - EB Garamond (darmowa, elegancka czcionka)
+# - Lub użyje TeX Gyre Pagella jako alternatywy
+#
+# Instalacja EB Garamond:
+# 1. Pobierz z: https://github.com/octaviopardo/EBGaramond12
+# 2. Zainstaluj w systemie
+# 3. Lub użyj menadżera czcionek MiKTeX
+
+# Użycie:
+# pandoc "src/esej.md" -o "output/esej_ozdobny.pdf" --metadata-file=ornamental-config.yaml
+---
