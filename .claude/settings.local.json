@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(cmd /c dir output*.pdf)",
-      "Bash(awk '{print $9, \"\"\"\"(\"\"\"\" $5/1024 \"\"\"\"KB)\"\"\"\"}')"
+      "Bash(awk '{print $9, \"\"\"\"(\"\"\"\" $5/1024 \"\"\"\"KB)\"\"\"\"}')",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
