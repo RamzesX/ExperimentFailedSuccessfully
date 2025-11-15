@@ -15,7 +15,8 @@
       "Bash(cmd /c \"dir output\\Quantum_Sword.pdf\")",
       "Bash(cmd /c dir \"output\\When_One_Became_Two.pdf\")",
       "Bash(cmd /c:*)",
-      "Bash(powershell -Command:*)"
+      "Bash(powershell -Command:*)",
+      "Bash(nul)"
     ],
     "deny": [],
     "ask": []

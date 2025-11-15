@@ -29,3 +29,39 @@ bin/
 ### Mac OS ###
 .DS_Store
 /mcp-server-neo4j-gds.log
+/.idea/
+/.claude/
+
+### LaTeX/Pandoc temporary files ###
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.tex.tmp
+*-pandoc*.pdf
+
+### Editor temporary files ###
+*~
+*.swp
+*.swo
+*.bak
+.~lock.*
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+### Temporary directories ###
+tmp/
+temp/
+*.tmp
