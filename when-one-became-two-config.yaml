@@ -1,0 +1,23 @@
+---
+title: "When One Became Two"
+subtitle: "The Szeptunki's Whisper on Complementary Creation"
+author: "Norbert Marchewka"
+date: \today
+lang: en-US
+
+# Pandoc options
+pdf-engine: xelatex
+template: templates/english-elegant.tex
+toc: false
+number-sections: false
+
+# Formatting
+fontsize: 12pt
+documentclass: article
+classoption:
+  - 12pt
+  - a4paper
+
+# Syntax highlighting
+highlight-style: tango
+---

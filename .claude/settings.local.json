@@ -12,7 +12,10 @@
       "Bash(cmd /c \"pandoc \"\"src/Quantum Sword.md\"\" -o \"\"output/Quantum_Sword.pdf\"\" --metadata-file=quantum-sword-config.yaml\")",
       "Bash(cmd /c dir outputQuantum*.pdf)",
       "Bash(cmd /c \"dir output\\*.pdf /b\")",
-      "Bash(cmd /c \"dir output\\Quantum_Sword.pdf\")"
+      "Bash(cmd /c \"dir output\\Quantum_Sword.pdf\")",
+      "Bash(cmd /c dir \"output\\When_One_Became_Two.pdf\")",
+      "Bash(cmd /c:*)",
+      "Bash(powershell -Command:*)"
     ],
     "deny": [],
     "ask": []
