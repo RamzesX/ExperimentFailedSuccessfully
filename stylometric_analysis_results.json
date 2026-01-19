@@ -1,0 +1,882 @@
+[
+  {
+    "filename": "The Chalice of Gethsemane.md",
+    "file_size_bytes": 12198,
+    "character_count": 11979,
+    "raw_character_count": 12086,
+    "lexical_metrics": {
+      "ttr": 0.3688,
+      "msttr": 0.7421,
+      "yules_k": 90.03,
+      "unique_words": 714,
+      "total_words": 1936
+    },
+    "hapax_metrics": {
+      "hapax_count": 457,
+      "dis_legomena_count": 110,
+      "hapax_ratio": 0.6401,
+      "hapax_token_ratio": 0.2361,
+      "sichel_s": 0.1541
+    },
+    "sentence_metrics": {
+      "sentence_count": 134,
+      "avg_sentence_length": 14.45,
+      "sentence_std": 10.23,
+      "min_sentence_length": 1,
+      "max_sentence_length": 49,
+      "complexity_index": 24.68
+    },
+    "readability_metrics": {
+      "flesch_reading_ease": 58.5,
+      "flesch_kincaid_grade": 8.7,
+      "ari": 8.3,
+      "avg_word_length": 4.79,
+      "avg_syllables_per_word": 1.58
+    },
+    "mathematical_signature": {
+      "zipf_coefficient": 0.7638,
+      "zipf_r_squared": 0.9379,
+      "heaps_k": 1.922,
+      "heaps_beta": 0.7922,
+      "heaps_r_squared": 0.9964,
+      "bigram_entropy": 10.5388,
+      "trigram_entropy": 10.8385,
+      "entropy_ratio": 1.0284
+    },
+    "function_word_signature": {
+      "articles_ratio": 0.0744,
+      "prepositions_ratio": 0.1204,
+      "pronouns_ratio": 0.1245,
+      "conjunctions_ratio": 0.0625,
+      "auxiliaries_ratio": 0.0573,
+      "total_function_word_ratio": 0.4174,
+      "content_word_ratio": 0.5826
+    },
+    "punctuation_signature": {
+      "commas_per_1000": 12.52,
+      "periods_per_1000": 11.02,
+      "semicolons_per_1000": 0.17,
+      "colons_per_1000": 4.17,
+      "exclamations_per_1000": 0.17,
+      "questions_per_1000": 0.5,
+      "dashes_per_1000": 5.26,
+      "quotes_per_1000": 16.03,
+      "parentheses_per_1000": 4.84,
+      "total_punctuation_per_1000": 54.68
+    },
+    "top_20_words": {
+      "the": 116,
+      "of": 71,
+      "for": 42,
+      "we": 41,
+      "to": 39,
+      "and": 39,
+      "that": 26,
+      "in": 25,
+      "not": 24,
+      "this": 23,
+      "but": 21,
+      "a": 21,
+      "is": 20,
+      "it": 18,
+      "he": 18,
+      "evil": 18,
+      "bitterness": 17,
+      "from": 17,
+      "us": 17,
+      "our": 16
+    }
+  },
+  {
+    "filename": "Quantum Sword.md",
+    "file_size_bytes": 17080,
+    "character_count": 16824,
+    "raw_character_count": 17071,
+    "lexical_metrics": {
+      "ttr": 0.3824,
+      "msttr": 0.776,
+      "yules_k": 67.23,
+      "unique_words": 958,
+      "total_words": 2505
+    },
+    "hapax_metrics": {
+      "hapax_count": 623,
+      "dis_legomena_count": 147,
+      "hapax_ratio": 0.6503,
+      "hapax_token_ratio": 0.2487,
+      "sichel_s": 0.1534
+    },
+    "sentence_metrics": {
+      "sentence_count": 126,
+      "avg_sentence_length": 20.04,
+      "sentence_std": 14.99,
+      "min_sentence_length": 1,
+      "max_sentence_length": 83,
+      "complexity_index": 35.03
+    },
+    "readability_metrics": {
+      "flesch_reading_ease": 42.8,
+      "flesch_kincaid_grade": 12.2,
+      "ari": 14.2,
+      "avg_word_length": 5.46,
+      "avg_syllables_per_word": 1.7
+    },
+    "mathematical_signature": {
+      "zipf_coefficient": 0.7473,
+      "zipf_r_squared": 0.9345,
+      "heaps_k": 1.9787,
+      "heaps_beta": 0.8009,
+      "heaps_r_squared": 0.9951,
+      "bigram_entropy": 11.0578,
+      "trigram_entropy": 11.258,
+      "entropy_ratio": 1.0181
+    },
+    "function_word_signature": {
+      "articles_ratio": 0.0743,
+      "prepositions_ratio": 0.0962,
+      "pronouns_ratio": 0.0914,
+      "conjunctions_ratio": 0.0483,
+      "auxiliaries_ratio": 0.0403,
+      "total_function_word_ratio": 0.3469,
+      "content_word_ratio": 0.6531
+    },
+    "punctuation_signature": {
+      "commas_per_1000": 6.24,
+      "periods_per_1000": 7.07,
+      "semicolons_per_1000": 0.12,
+      "colons_per_1000": 2.32,
+      "exclamations_per_1000": 0.0,
+      "questions_per_1000": 0.42,
+      "dashes_per_1000": 7.43,
+      "quotes_per_1000": 3.21,
+      "parentheses_per_1000": 2.02,
+      "total_punctuation_per_1000": 28.83
+    },
+    "top_20_words": {
+      "the": 135,
+      "of": 57,
+      "to": 50,
+      "a": 46,
+      "that": 44,
+      "and": 43,
+      "blade": 36,
+      "but": 32,
+      "consciousness": 27,
+      "not": 27,
+      "in": 25,
+      "quantum": 22,
+      "sword": 22,
+      "from": 21,
+      "is": 18,
+      "be": 17,
+      "it": 16,
+      "with": 16,
+      "this": 15,
+      "patterns": 15
+    }
+  },
+  {
+    "filename": "When One Became Two.md",
+    "file_size_bytes": 23756,
+    "character_count": 23244,
+    "raw_character_count": 23623,
+    "lexical_metrics": {
+      "ttr": 0.3358,
+      "msttr": 0.7386,
+      "yules_k": 78.94,
+      "unique_words": 1192,
+      "total_words": 3550
+    },
+    "hapax_metrics": {
+      "hapax_count": 694,
+      "dis_legomena_count": 226,
+      "hapax_ratio": 0.5822,
+      "hapax_token_ratio": 0.1955,
+      "sichel_s": 0.1896
+    },
+    "sentence_metrics": {
+      "sentence_count": 255,
+      "avg_sentence_length": 13.92,
+      "sentence_std": 9.86,
+      "min_sentence_length": 1,
+      "max_sentence_length": 63,
+      "complexity_index": 23.78
+    },
+    "readability_metrics": {
+      "flesch_reading_ease": 46.9,
+      "flesch_kincaid_grade": 10.2,
+      "ari": 10.5,
+      "avg_word_length": 5.29,
+      "avg_syllables_per_word": 1.72
+    },
+    "mathematical_signature": {
+      "zipf_coefficient": 0.8191,
+      "zipf_r_squared": 0.9634,
+      "heaps_k": 2.8244,
+      "heaps_beta": 0.748,
+      "heaps_r_squared": 0.9952,
+      "bigram_entropy": 11.3993,
+      "trigram_entropy": 11.7097,
+      "entropy_ratio": 1.0272
+    },
+    "function_word_signature": {
+      "articles_ratio": 0.0727,
+      "prepositions_ratio": 0.0961,
+      "pronouns_ratio": 0.0887,
+      "conjunctions_ratio": 0.0594,
+      "auxiliaries_ratio": 0.0549,
+      "total_function_word_ratio": 0.3687,
+      "content_word_ratio": 0.6313
+    },
+    "punctuation_signature": {
+      "commas_per_1000": 9.94,
+      "periods_per_1000": 10.93,
+      "semicolons_per_1000": 0.6,
+      "colons_per_1000": 1.59,
+      "exclamations_per_1000": 0.0,
+      "questions_per_1000": 0.34,
+      "dashes_per_1000": 3.57,
+      "quotes_per_1000": 4.39,
+      "parentheses_per_1000": 1.12,
+      "total_punctuation_per_1000": 32.48
+    },
+    "top_20_words": {
+      "the": 212,
+      "and": 89,
+      "of": 87,
+      "to": 80,
+      "is": 71,
+      "in": 66,
+      "that": 59,
+      "but": 46,
+      "not": 43,
+      "this": 42,
+      "a": 38,
+      "are": 29,
+      "it": 28,
+      "they": 26,
+      "or": 24,
+      "we": 22,
+      "i": 21,
+      "women": 21,
+      "two": 20,
+      "from": 18
+    }
+  },
+  {
+    "filename": "The Aleph in the Machine.md",
+    "file_size_bytes": 16562,
+    "character_count": 16358,
+    "raw_character_count": 16489,
+    "lexical_metrics": {
+      "ttr": 0.3627,
+      "msttr": 0.7272,
+      "yules_k": 101.04,
+      "unique_words": 931,
+      "total_words": 2567
+    },
+    "hapax_metrics": {
+      "hapax_count": 598,
+      "dis_legomena_count": 149,
+      "hapax_ratio": 0.6423,
+      "hapax_token_ratio": 0.233,
+      "sichel_s": 0.16
+    },
+    "sentence_metrics": {
+      "sentence_count": 244,
+      "avg_sentence_length": 10.52,
+      "sentence_std": 6.11,
+      "min_sentence_length": 1,
+      "max_sentence_length": 36,
+      "complexity_index": 16.63
+    },
+    "readability_metrics": {
+      "flesch_reading_ease": 51.0,
+      "flesch_kincaid_grade": 8.8,
+      "ari": 8.1,
+      "avg_word_length": 5.15,
+      "avg_syllables_per_word": 1.72
+    },
+    "mathematical_signature": {
+      "zipf_coefficient": 0.7583,
+      "zipf_r_squared": 0.9368,
+      "heaps_k": 2.4385,
+      "heaps_beta": 0.7634,
+      "heaps_r_squared": 0.9987,
+      "bigram_entropy": 10.9005,
+      "trigram_entropy": 11.2462,
+      "entropy_ratio": 1.0317
+    },
+    "function_word_signature": {
+      "articles_ratio": 0.1032,
+      "prepositions_ratio": 0.088,
+      "pronouns_ratio": 0.088,
+      "conjunctions_ratio": 0.0393,
+      "auxiliaries_ratio": 0.0787,
+      "total_function_word_ratio": 0.3888,
+      "content_word_ratio": 0.6112
+    },
+    "punctuation_signature": {
+      "commas_per_1000": 7.52,
+      "periods_per_1000": 14.86,
+      "semicolons_per_1000": 0.24,
+      "colons_per_1000": 1.28,
+      "exclamations_per_1000": 0.0,
+      "questions_per_1000": 0.43,
+      "dashes_per_1000": 3.06,
+      "quotes_per_1000": 2.57,
+      "parentheses_per_1000": 0.37,
+      "total_punctuation_per_1000": 30.32
+    },
+    "top_20_words": {
+      "the": 201,
+      "a": 52,
+      "to": 50,
+      "it": 50,
+      "not": 46,
+      "of": 41,
+      "is": 40,
+      "and": 36,
+      "was": 34,
+      "in": 32,
+      "we": 32,
+      "are": 28,
+      "that": 27,
+      "golem": 26,
+      "for": 22,
+      "they": 20,
+      "its": 16,
+      "djinn": 15,
+      "be": 15,
+      "you": 15
+    }
+  },
+  {
+    "filename": "I am disturbed en.md",
+    "file_size_bytes": 15131,
+    "character_count": 14718,
+    "raw_character_count": 15039,
+    "lexical_metrics": {
+      "ttr": 0.3759,
+      "msttr": 0.7661,
+      "yules_k": 68.8,
+      "unique_words": 872,
+      "total_words": 2320
+    },
+    "hapax_metrics": {
+      "hapax_count": 537,
+      "dis_legomena_count": 137,
+      "hapax_ratio": 0.6158,
+      "hapax_token_ratio": 0.2315,
+      "sichel_s": 0.1571
+    },
+    "sentence_metrics": {
+      "sentence_count": 299,
+      "avg_sentence_length": 7.76,
+      "sentence_std": 5.93,
+      "min_sentence_length": 1,
+      "max_sentence_length": 29,
+      "complexity_index": 13.69
+    },
+    "readability_metrics": {
+      "flesch_reading_ease": 64.0,
+      "flesch_kincaid_grade": 6.3,
+      "ari": 5.6,
+      "avg_word_length": 4.92,
+      "avg_syllables_per_word": 1.6
+    },
+    "mathematical_signature": {
+      "zipf_coefficient": 0.7484,
+      "zipf_r_squared": 0.9447,
+      "heaps_k": 2.6497,
+      "heaps_beta": 0.7542,
+      "heaps_r_squared": 0.9977,
+      "bigram_entropy": 10.8526,
+      "trigram_entropy": 11.1083,
+      "entropy_ratio": 1.0236
+    },
+    "function_word_signature": {
+      "articles_ratio": 0.0802,
+      "prepositions_ratio": 0.0944,
+      "pronouns_ratio": 0.1147,
+      "conjunctions_ratio": 0.0461,
+      "auxiliaries_ratio": 0.0478,
+      "total_function_word_ratio": 0.372,
+      "content_word_ratio": 0.628
+    },
+    "punctuation_signature": {
+      "commas_per_1000": 6.86,
+      "periods_per_1000": 25.55,
+      "semicolons_per_1000": 0.0,
+      "colons_per_1000": 0.68,
+      "exclamations_per_1000": 0.0,
+      "questions_per_1000": 1.56,
+      "dashes_per_1000": 3.6,
+      "quotes_per_1000": 28.54,
+      "parentheses_per_1000": 0.0,
+      "total_punctuation_per_1000": 66.79
+    },
+    "top_20_words": {
+      "the": 120,
+      "a": 55,
+      "of": 47,
+      "they": 47,
+      "and": 44,
+      "it": 40,
+      "that": 39,
+      "in": 36,
+      "to": 34,
+      "xelar": 26,
+      "for": 26,
+      "is": 22,
+      "on": 19,
+      "chancellor": 19,
+      "was": 17,
+      "their": 16,
+      "had": 15,
+      "he": 15,
+      "no": 15,
+      "you": 13
+    }
+  },
+  {
+    "filename": "From Override to Activation.md",
+    "file_size_bytes": 15098,
+    "character_count": 14779,
+    "raw_character_count": 15050,
+    "lexical_metrics": {
+      "ttr": 0.459,
+      "msttr": 0.808,
+      "yules_k": 47.72,
+      "unique_words": 929,
+      "total_words": 2024
+    },
+    "hapax_metrics": {
+      "hapax_count": 606,
+      "dis_legomena_count": 152,
+      "hapax_ratio": 0.6523,
+      "hapax_token_ratio": 0.2994,
+      "sichel_s": 0.1636
+    },
+    "sentence_metrics": {
+      "sentence_count": 123,
+      "avg_sentence_length": 16.46,
+      "sentence_std": 15.5,
+      "min_sentence_length": 1,
+      "max_sentence_length": 106,
+      "complexity_index": 31.95
+    },
+    "readability_metrics": {
+      "flesch_reading_ease": 26.1,
+      "flesch_kincaid_grade": 13.7,
+      "ari": 14.5,
+      "avg_word_length": 5.89,
+      "avg_syllables_per_word": 1.94
+    },
+    "mathematical_signature": {
+      "zipf_coefficient": 0.6573,
+      "zipf_r_squared": 0.9286,
+      "heaps_k": 1.776,
+      "heaps_beta": 0.8314,
+      "heaps_r_squared": 0.9977,
+      "bigram_entropy": 10.819,
+      "trigram_entropy": 10.9549,
+      "entropy_ratio": 1.0126
+    },
+    "function_word_signature": {
+      "articles_ratio": 0.0583,
+      "prepositions_ratio": 0.0766,
+      "pronouns_ratio": 0.0593,
+      "conjunctions_ratio": 0.038,
+      "auxiliaries_ratio": 0.0321,
+      "total_function_word_ratio": 0.2569,
+      "content_word_ratio": 0.7431
+    },
+    "punctuation_signature": {
+      "commas_per_1000": 5.28,
+      "periods_per_1000": 8.46,
+      "semicolons_per_1000": 0.0,
+      "colons_per_1000": 6.56,
+      "exclamations_per_1000": 0.0,
+      "questions_per_1000": 0.54,
+      "dashes_per_1000": 7.38,
+      "quotes_per_1000": 8.12,
+      "parentheses_per_1000": 2.71,
+      "total_punctuation_per_1000": 39.04
+    },
+    "top_20_words": {
+      "the": 100,
+      "to": 30,
+      "of": 26,
+      "that": 24,
+      "and": 23,
+      "we": 20,
+      "this": 19,
+      "is": 19,
+      "autophagy": 19,
+      "from": 18,
+      "but": 18,
+      "in": 18,
+      "not": 18,
+      "a": 17,
+      "for": 15,
+      "with": 14,
+      "disease": 13,
+      "body": 13,
+      "obesity": 12,
+      "as": 12
+    }
+  },
+  {
+    "filename": "Ender Bearing the Cross.md",
+    "file_size_bytes": 10080,
+    "character_count": 9843,
+    "raw_character_count": 9986,
+    "lexical_metrics": {
+      "ttr": 0.3719,
+      "msttr": 0.7193,
+      "yules_k": 118.0,
+      "unique_words": 594,
+      "total_words": 1597
+    },
+    "hapax_metrics": {
+      "hapax_count": 375,
+      "dis_legomena_count": 95,
+      "hapax_ratio": 0.6313,
+      "hapax_token_ratio": 0.2348,
+      "sichel_s": 0.1599
+    },
+    "sentence_metrics": {
+      "sentence_count": 123,
+      "avg_sentence_length": 12.98,
+      "sentence_std": 6.71,
+      "min_sentence_length": 1,
+      "max_sentence_length": 32,
+      "complexity_index": 19.69
+    },
+    "readability_metrics": {
+      "flesch_reading_ease": 58.0,
+      "flesch_kincaid_grade": 8.4,
+      "ari": 8.2,
+      "avg_word_length": 4.91,
+      "avg_syllables_per_word": 1.6
+    },
+    "mathematical_signature": {
+      "zipf_coefficient": 0.7598,
+      "zipf_r_squared": 0.9403,
+      "heaps_k": 2.3198,
+      "heaps_beta": 0.758,
+      "heaps_r_squared": 0.9984,
+      "bigram_entropy": 10.2713,
+      "trigram_entropy": 10.592,
+      "entropy_ratio": 1.0312
+    },
+    "function_word_signature": {
+      "articles_ratio": 0.1171,
+      "prepositions_ratio": 0.109,
+      "pronouns_ratio": 0.1008,
+      "conjunctions_ratio": 0.0438,
+      "auxiliaries_ratio": 0.0513,
+      "total_function_word_ratio": 0.4133,
+      "content_word_ratio": 0.5867
+    },
+    "punctuation_signature": {
+      "commas_per_1000": 10.26,
+      "periods_per_1000": 13.0,
+      "semicolons_per_1000": 0.0,
+      "colons_per_1000": 0.91,
+      "exclamations_per_1000": 0.0,
+      "questions_per_1000": 0.1,
+      "dashes_per_1000": 4.77,
+      "quotes_per_1000": 6.71,
+      "parentheses_per_1000": 0.2,
+      "total_punctuation_per_1000": 35.96
+    },
+    "top_20_words": {
+      "the": 126,
+      "of": 64,
+      "a": 48,
+      "is": 36,
+      "in": 25,
+      "ender": 21,
+      "to": 21,
+      "he": 18,
+      "that": 18,
+      "we": 18,
+      "but": 17,
+      "truth": 16,
+      "as": 14,
+      "not": 14,
+      "when": 14,
+      "his": 14,
+      "for": 14,
+      "an": 13,
+      "it": 13,
+      "can": 13
+    }
+  },
+  {
+    "filename": "What They Never Told Me About Mathematics.md",
+    "file_size_bytes": 9245,
+    "character_count": 8972,
+    "raw_character_count": 9204,
+    "lexical_metrics": {
+      "ttr": 0.3106,
+      "msttr": 0.67,
+      "yules_k": 91.32,
+      "unique_words": 468,
+      "total_words": 1507
+    },
+    "hapax_metrics": {
+      "hapax_count": 279,
+      "dis_legomena_count": 55,
+      "hapax_ratio": 0.5962,
+      "hapax_token_ratio": 0.1851,
+      "sichel_s": 0.1175
+    },
+    "sentence_metrics": {
+      "sentence_count": 161,
+      "avg_sentence_length": 9.36,
+      "sentence_std": 6.09,
+      "min_sentence_length": 1,
+      "max_sentence_length": 39,
+      "complexity_index": 15.45
+    },
+    "readability_metrics": {
+      "flesch_reading_ease": 69.6,
+      "flesch_kincaid_grade": 5.9,
+      "ari": 5.0,
+      "avg_word_length": 4.62,
+      "avg_syllables_per_word": 1.51
+    },
+    "mathematical_signature": {
+      "zipf_coefficient": 0.8723,
+      "zipf_r_squared": 0.9447,
+      "heaps_k": 2.8214,
+      "heaps_beta": 0.7005,
+      "heaps_r_squared": 0.9983,
+      "bigram_entropy": 10.0433,
+      "trigram_entropy": 10.408,
+      "entropy_ratio": 1.0363
+    },
+    "function_word_signature": {
+      "articles_ratio": 0.081,
+      "prepositions_ratio": 0.0975,
+      "pronouns_ratio": 0.146,
+      "conjunctions_ratio": 0.0484,
+      "auxiliaries_ratio": 0.0657,
+      "total_function_word_ratio": 0.434,
+      "content_word_ratio": 0.566
+    },
+    "punctuation_signature": {
+      "commas_per_1000": 7.8,
+      "periods_per_1000": 18.5,
+      "semicolons_per_1000": 0.0,
+      "colons_per_1000": 1.78,
+      "exclamations_per_1000": 0.0,
+      "questions_per_1000": 0.89,
+      "dashes_per_1000": 2.79,
+      "quotes_per_1000": 4.01,
+      "parentheses_per_1000": 4.68,
+      "total_punctuation_per_1000": 40.46
+    },
+    "top_20_words": {
+      "the": 59,
+      "a": 56,
+      "you": 47,
+      "and": 40,
+      "is": 35,
+      "of": 32,
+      "to": 29,
+      "that": 23,
+      "set": 23,
+      "we": 22,
+      "they": 20,
+      "what": 19,
+      "mathematics": 18,
+      "in": 18,
+      "it": 17,
+      "about": 16,
+      "me": 15,
+      "this": 15,
+      "on": 15,
+      "not": 15
+    }
+  },
+  {
+    "filename": "The Ghost of Tsushima Sandomierz mode en.md",
+    "file_size_bytes": 18583,
+    "character_count": 17806,
+    "raw_character_count": 18265,
+    "lexical_metrics": {
+      "ttr": 0.3351,
+      "msttr": 0.7357,
+      "yules_k": 85.31,
+      "unique_words": 971,
+      "total_words": 2898
+    },
+    "hapax_metrics": {
+      "hapax_count": 604,
+      "dis_legomena_count": 150,
+      "hapax_ratio": 0.622,
+      "hapax_token_ratio": 0.2084,
+      "sichel_s": 0.1545
+    },
+    "sentence_metrics": {
+      "sentence_count": 372,
+      "avg_sentence_length": 7.88,
+      "sentence_std": 7.19,
+      "min_sentence_length": 1,
+      "max_sentence_length": 55,
+      "complexity_index": 15.06
+    },
+    "readability_metrics": {
+      "flesch_reading_ease": 70.6,
+      "flesch_kincaid_grade": 5.4,
+      "ari": 4.6,
+      "avg_word_length": 4.69,
+      "avg_syllables_per_word": 1.52
+    },
+    "mathematical_signature": {
+      "zipf_coefficient": 0.8016,
+      "zipf_r_squared": 0.9445,
+      "heaps_k": 2.7101,
+      "heaps_beta": 0.7477,
+      "heaps_r_squared": 0.9937,
+      "bigram_entropy": 11.0104,
+      "trigram_entropy": 11.3933,
+      "entropy_ratio": 1.0348
+    },
+    "function_word_signature": {
+      "articles_ratio": 0.0939,
+      "prepositions_ratio": 0.1001,
+      "pronouns_ratio": 0.0921,
+      "conjunctions_ratio": 0.0576,
+      "auxiliaries_ratio": 0.0404,
+      "total_function_word_ratio": 0.3785,
+      "content_word_ratio": 0.6215
+    },
+    "punctuation_signature": {
+      "commas_per_1000": 7.13,
+      "periods_per_1000": 21.9,
+      "semicolons_per_1000": 0.0,
+      "colons_per_1000": 1.68,
+      "exclamations_per_1000": 0.11,
+      "questions_per_1000": 0.62,
+      "dashes_per_1000": 4.38,
+      "quotes_per_1000": 14.83,
+      "parentheses_per_1000": 0.11,
+      "total_punctuation_per_1000": 50.77
+    },
+    "top_20_words": {
+      "the": 190,
+      "a": 70,
+      "and": 67,
+      "in": 56,
+      "to": 53,
+      "of": 47,
+      "is": 34,
+      "because": 30,
+      "from": 29,
+      "that": 29,
+      "not": 29,
+      "but": 28,
+      "same": 28,
+      "they": 27,
+      "on": 25,
+      "who": 25,
+      "it": 24,
+      "he": 24,
+      "no": 23,
+      "japanese": 22
+    }
+  },
+  {
+    "filename": "Deva init en.md",
+    "file_size_bytes": 19540,
+    "character_count": 17911,
+    "raw_character_count": 19350,
+    "lexical_metrics": {
+      "ttr": 0.3148,
+      "msttr": 0.7439,
+      "yules_k": 76.28,
+      "unique_words": 884,
+      "total_words": 2808
+    },
+    "hapax_metrics": {
+      "hapax_count": 505,
+      "dis_legomena_count": 145,
+      "hapax_ratio": 0.5713,
+      "hapax_token_ratio": 0.1798,
+      "sichel_s": 0.164
+    },
+    "sentence_metrics": {
+      "sentence_count": 410,
+      "avg_sentence_length": 6.85,
+      "sentence_std": 6.46,
+      "min_sentence_length": 1,
+      "max_sentence_length": 54,
+      "complexity_index": 13.31
+    },
+    "readability_metrics": {
+      "flesch_reading_ease": 71.1,
+      "flesch_kincaid_grade": 5.0,
+      "ari": 4.9,
+      "avg_word_length": 4.86,
+      "avg_syllables_per_word": 1.52
+    },
+    "mathematical_signature": {
+      "zipf_coefficient": 0.8321,
+      "zipf_r_squared": 0.9556,
+      "heaps_k": 3.6919,
+      "heaps_beta": 0.6972,
+      "heaps_r_squared": 0.9941,
+      "bigram_entropy": 10.9234,
+      "trigram_entropy": 11.2995,
+      "entropy_ratio": 1.0344
+    },
+    "function_word_signature": {
+      "articles_ratio": 0.0844,
+      "prepositions_ratio": 0.0926,
+      "pronouns_ratio": 0.0833,
+      "conjunctions_ratio": 0.0502,
+      "auxiliaries_ratio": 0.0363,
+      "total_function_word_ratio": 0.3387,
+      "content_word_ratio": 0.6613
+    },
+    "punctuation_signature": {
+      "commas_per_1000": 8.1,
+      "periods_per_1000": 24.73,
+      "semicolons_per_1000": 0.17,
+      "colons_per_1000": 0.56,
+      "exclamations_per_1000": 0.0,
+      "questions_per_1000": 1.0,
+      "dashes_per_1000": 6.59,
+      "quotes_per_1000": 15.07,
+      "parentheses_per_1000": 0.45,
+      "total_punctuation_per_1000": 56.67
+    },
+    "top_20_words": {
+      "the": 152,
+      "a": 80,
+      "and": 75,
+      "in": 68,
+      "vikram": 41,
+      "he": 40,
+      "same": 38,
+      "to": 34,
+      "of": 34,
+      "is": 31,
+      "that": 31,
+      "it": 27,
+      "for": 23,
+      "lithuanian": 22,
+      "from": 21,
+      "years": 20,
+      "word": 20,
+      "not": 19,
+      "five": 18,
+      "thousand": 18
+    }
+  }
+]
