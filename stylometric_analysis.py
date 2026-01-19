@@ -14,15 +14,25 @@ Mathematical Blueprints Analyzed:
 5. Readability Indices - accessibility metrics
 6. N-gram Entropy - predictability patterns
 7. Hapax Legomena Ratio - unique word usage
+
+Usage:
+    python stylometric_analysis.py [essays_directory]
+    
+    If no directory is provided, defaults to ./Essays relative to the script location.
 """
 
 import os
 import re
 import math
 import statistics
+import sys
 from collections import Counter
 from pathlib import Path
 import json
+
+# Configuration constants
+ZIPF_FREQUENCY_LIMIT = 1000  # Maximum number of words for Zipf analysis
+FILENAME_DISPLAY_LENGTH = 40  # Truncation length for filenames in reports
 
 
 def clean_text(text: str) -> str:
@@ -84,7 +94,7 @@ def calculate_zipf_coefficient(word_counts: Counter) -> tuple:
     
     # Get frequencies sorted by rank
     frequencies = sorted(word_counts.values(), reverse=True)
-    n = min(len(frequencies), 1000)  # Limit to top 1000 for stability
+    n = min(len(frequencies), ZIPF_FREQUENCY_LIMIT)  # Limit for stability
     
     # Log-log regression: log(freq) = log(c) - s*log(rank)
     log_ranks = [math.log(i + 1) for i in range(n)]
@@ -494,7 +504,7 @@ def generate_comparison_report(analyses: list) -> str:
     report.append("|-------|-------|-----------|------------|-----|\n")
     
     for a in analyses:
-        report.append(f"| {a['filename'][:40]}... | "
+        report.append(f"| {a['filename'][:FILENAME_DISPLAY_LENGTH]}... | "
                      f"{a['lexical_metrics']['total_words']} | "
                      f"{a['sentence_metrics']['sentence_count']} | "
                      f"{a['lexical_metrics']['unique_words']} | "
@@ -516,7 +526,8 @@ def generate_comparison_report(analyses: list) -> str:
             interp = "~ Slight deviation from typical"
         else:
             interp = "? Unusual distribution"
-        report.append(f"| {a['filename'][:35]}... | {coef:.3f} | {r2:.3f} | {interp} |\n")
+        name_truncated = a['filename'][:FILENAME_DISPLAY_LENGTH - 5]
+        report.append(f"| {name_truncated}... | {coef:.3f} | {r2:.3f} | {interp} |\n")
     
     # Heaps' Law Analysis
     report.append("\n## 3. Heaps' Law (Vocabulary Growth Rate)\n")
@@ -535,7 +546,8 @@ def generate_comparison_report(analyses: list) -> str:
             richness = "Medium - balanced"
         else:
             richness = "Low - focused vocabulary"
-        report.append(f"| {a['filename'][:35]}... | {k:.2f} | {beta:.3f} | {r2:.3f} | {richness} |\n")
+        name_truncated = a['filename'][:FILENAME_DISPLAY_LENGTH - 5]
+        report.append(f"| {name_truncated}... | {k:.2f} | {beta:.3f} | {r2:.3f} | {richness} |\n")
     
     # Readability Analysis
     report.append("\n## 4. Readability Metrics\n")
@@ -552,7 +564,8 @@ def generate_comparison_report(analyses: list) -> str:
             level = "Academic"
         else:
             level = "Complex"
-        report.append(f"| {a['filename'][:35]}... | {flesch:.1f} | {grade:.1f} | {ari:.1f} | {level} |\n")
+        name_truncated = a['filename'][:FILENAME_DISPLAY_LENGTH - 5]
+        report.append(f"| {name_truncated}... | {flesch:.1f} | {grade:.1f} | {ari:.1f} | {level} |\n")
     
     # Entropy Analysis
     report.append("\n## 5. N-gram Entropy (Predictability Patterns)\n")
@@ -569,7 +582,8 @@ def generate_comparison_report(analyses: list) -> str:
             pattern = "Moderate variation"
         else:
             pattern = "Repetitive patterns"
-        report.append(f"| {a['filename'][:35]}... | {bi:.2f} | {tri:.2f} | {pattern} |\n")
+        name_truncated = a['filename'][:FILENAME_DISPLAY_LENGTH - 5]
+        report.append(f"| {name_truncated}... | {bi:.2f} | {tri:.2f} | {pattern} |\n")
     
     # Hapax Analysis
     report.append("\n## 6. Hapax Legomena (Unique Word Usage)\n")
@@ -586,7 +600,8 @@ def generate_comparison_report(analyses: list) -> str:
             interp = "Rich vocabulary"
         else:
             interp = "Focused vocabulary"
-        report.append(f"| {a['filename'][:35]}... | {hapax} | {ratio:.3f} | {interp} |\n")
+        name_truncated = a['filename'][:FILENAME_DISPLAY_LENGTH - 5]
+        report.append(f"| {name_truncated}... | {hapax} | {ratio:.3f} | {interp} |\n")
     
     # Function Word Signature
     report.append("\n## 7. Function Word Signature (Stylometric Markers)\n")
@@ -599,7 +614,8 @@ def generate_comparison_report(analyses: list) -> str:
         pro = a['function_word_signature'].get('pronouns_ratio', 0)
         conj = a['function_word_signature'].get('conjunctions_ratio', 0)
         total = a['function_word_signature'].get('total_function_word_ratio', 0)
-        report.append(f"| {a['filename'][:35]}... | {art:.3f} | {pro:.3f} | {conj:.3f} | {total:.3f} |\n")
+        name_truncated = a['filename'][:FILENAME_DISPLAY_LENGTH - 5]
+        report.append(f"| {name_truncated}... | {art:.3f} | {pro:.3f} | {conj:.3f} | {total:.3f} |\n")
     
     # Mathematical Signature Comparison
     report.append("\n## 8. Mathematical Signature Summary\n")
@@ -647,7 +663,8 @@ def generate_comparison_report(analyses: list) -> str:
     report.append("|------|-------|---------------|\n")
     for i, (name, score) in enumerate(scores, 1):
         stars = "★" * min(score, 5) + "☆" * max(0, 5 - score)
-        report.append(f"| {i} | {name[:40]}... | {score}/9 {stars} |\n")
+        name_truncated = name[:FILENAME_DISPLAY_LENGTH]
+        report.append(f"| {i} | {name_truncated}... | {score}/9 {stars} |\n")
     
     # Conclusions
     report.append("\n## 10. Key Findings\n\n")
@@ -688,7 +705,19 @@ def generate_comparison_report(analyses: list) -> str:
 
 def main():
     """Main function to run the analysis."""
-    essays_dir = Path("/home/runner/work/ExperimentFailedSuccessfully/ExperimentFailedSuccessfully/Essays")
+    # Determine essays directory
+    # Priority: 1) Command line argument, 2) Relative to script location
+    if len(sys.argv) > 1:
+        essays_dir = Path(sys.argv[1])
+    else:
+        # Default to Essays directory relative to script location
+        script_dir = Path(__file__).parent.resolve()
+        essays_dir = script_dir / "Essays"
+    
+    if not essays_dir.exists():
+        print(f"Error: Essays directory not found: {essays_dir}")
+        print(f"Usage: python {sys.argv[0]} [essays_directory]")
+        sys.exit(1)
     
     # Only analyze English essays (skip Polish versions to avoid language mixing)
     english_essays = [
