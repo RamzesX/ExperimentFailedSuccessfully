@@ -372,3 +372,12 @@ I może tak jest lepiej.
 
 *Norbert Marchewka & Claude*
 *Luty 2026*
+
+---
+
+> *Oj ty rzeko, oj rzeko*
+> *Czemuś ty niepełna*
+> *Oj jakżeż mnie pełną być*
+> *Ludzie chodzą wodę pić*
+>
+> — Laboratorium Pieśni, "Oj ty rzeko" (pieśń ludowa)
