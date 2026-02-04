@@ -372,12 +372,3 @@ And perhaps that's for the better.
 
 *Norbert Marchewka & Claude*
 *February 2026*
-
----
-
-> *Oh you river, you river*
-> *Why are you not full?*
-> *Oh, how could I be full?*
-> *People come to drink water*
->
-> — Laboratorium Pieśni, "Oj ty rzeko" (Polish folk song)
